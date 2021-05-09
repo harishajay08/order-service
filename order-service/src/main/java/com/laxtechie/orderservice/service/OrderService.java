@@ -1,0 +1,17 @@
+package com.laxtechie.orderservice.service;
+
+import com.laxtechie.orderservice.entity.Order;
+import com.laxtechie.orderservice.repository.OrderRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class OrderService {
+
+    @Autowired
+    private OrderRepository repository;
+
+    public Order saveOrder (Order order){
+        return repository.save(order);
+    }
+}
